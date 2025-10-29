@@ -1,10 +1,10 @@
-# 🌐 Soluma: The Cypherpunk Event Platform
+# 🌐 payuur: The Cypherpunk Event Platform
 
 A **real-time, decentralized event platform** built for the **MagicBlock Real-Time Side Track** of the **Cypherpunk Hackathon**. Combining cutting-edge real-time analytics with cypherpunk privacy principles on Solana.
 
 **🏆 Hackathon Submission for 12.5k USDC Prize Pool**
 
-| [🔴 Live Demo](https://soluma.vercel.app/) | [📄 Pitch Deck](https://gamma.app/docs/Soluma-The-Web3-Event-Platform-l0onzh91an2dum7?mode=doc) | [📂 GitHub Repo](https://github.com/dhruv457457/soLuma) |
+| [📄 Pitch Deck](https://gamma.app/docs/Soluma-The-Web3-Event-Platform-l0onzh91an2dum7?
 
 ### 🎮 Quick Start:
 ```bash
