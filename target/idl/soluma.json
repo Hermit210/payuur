@@ -1,0 +1,401 @@
+{
+  "address": "CfbfPPJfZVwiiSPSaf67s6eJKnLX3TARiC3MpJGsjWxr",
+  "metadata": {
+    "name": "soluma",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Soluma Event Platform with MagicBlock Ephemeral Rollups"
+  },
+  "instructions": [
+    {
+      "name": "check_in_ticket",
+      "docs": [
+        "Check-in ticket with real-time verification"
+      ],
+      "discriminator": [
+        174,
+        66,
+        18,
+        131,
+        231,
+        120,
+        103,
+        246
+      ],
+      "accounts": [
+        {
+          "name": "ticket",
+          "writable": true
+        },
+        {
+          "name": "organizer",
+          "signer": true
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "get_event_stats",
+      "docs": [
+        "Get real-time event stats"
+      ],
+      "discriminator": [
+        168,
+        69,
+        58,
+        36,
+        187,
+        20,
+        227,
+        222
+      ],
+      "accounts": [
+        {
+          "name": "event"
+        }
+      ],
+      "args": [],
+      "returns": {
+        "defined": {
+          "name": "EventStats"
+        }
+      }
+    },
+    {
+      "name": "initialize_event",
+      "docs": [
+        "Initialize a new event with MagicBlock ER support"
+      ],
+      "discriminator": [
+        126,
+        249,
+        86,
+        221,
+        202,
+        171,
+        134,
+        20
+      ],
+      "accounts": [
+        {
+          "name": "event",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  101,
+                  118,
+                  101,
+                  110,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "organizer"
+              },
+              {
+                "kind": "arg",
+                "path": "title"
+              }
+            ]
+          }
+        },
+        {
+          "name": "organizer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "name": "price_lamports",
+          "type": "u64"
+        },
+        {
+          "name": "capacity",
+          "type": "u32"
+        },
+        {
+          "name": "starts_at",
+          "type": "i64"
+        },
+        {
+          "name": "ends_at",
+          "type": "i64"
+        }
+      ]
+    },
+    {
+      "name": "purchase_ticket",
+      "docs": [
+        "Purchase ticket with real-time MagicBlock processing"
+      ],
+      "discriminator": [
+        90,
+        91,
+        173,
+        20,
+        72,
+        109,
+        15,
+        146
+      ],
+      "accounts": [
+        {
+          "name": "event",
+          "writable": true
+        },
+        {
+          "name": "ticket",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  116,
+                  105,
+                  99,
+                  107,
+                  101,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "event"
+              },
+              {
+                "kind": "account",
+                "path": "buyer"
+              }
+            ]
+          }
+        },
+        {
+          "name": "buyer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "organizer_account",
+          "writable": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "update_event_capacity",
+      "docs": [
+        "Update event capacity in real-time"
+      ],
+      "discriminator": [
+        132,
+        239,
+        68,
+        101,
+        143,
+        203,
+        121,
+        7
+      ],
+      "accounts": [
+        {
+          "name": "event",
+          "writable": true
+        },
+        {
+          "name": "organizer",
+          "signer": true
+        }
+      ],
+      "args": [
+        {
+          "name": "new_capacity",
+          "type": "u32"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Event",
+      "discriminator": [
+        125,
+        192,
+        125,
+        158,
+        9,
+        115,
+        152,
+        233
+      ]
+    },
+    {
+      "name": "Ticket",
+      "discriminator": [
+        41,
+        228,
+        24,
+        165,
+        78,
+        90,
+        235,
+        200
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "EventSoldOut",
+      "msg": "Event is sold out"
+    },
+    {
+      "code": 6001,
+      "name": "EventInactive",
+      "msg": "Event is not active"
+    },
+    {
+      "code": 6002,
+      "name": "TicketAlreadyUsed",
+      "msg": "Ticket has already been used"
+    },
+    {
+      "code": 6003,
+      "name": "UnauthorizedOrganizer",
+      "msg": "Unauthorized organizer"
+    }
+  ],
+  "types": [
+    {
+      "name": "Event",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "organizer",
+            "type": "pubkey"
+          },
+          {
+            "name": "title",
+            "type": "string"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "price_lamports",
+            "type": "u64"
+          },
+          {
+            "name": "capacity",
+            "type": "u32"
+          },
+          {
+            "name": "tickets_sold",
+            "type": "u32"
+          },
+          {
+            "name": "starts_at",
+            "type": "i64"
+          },
+          {
+            "name": "ends_at",
+            "type": "i64"
+          },
+          {
+            "name": "is_active",
+            "type": "bool"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EventStats",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "tickets_sold",
+            "type": "u32"
+          },
+          {
+            "name": "capacity",
+            "type": "u32"
+          },
+          {
+            "name": "revenue",
+            "type": "u64"
+          },
+          {
+            "name": "is_active",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ticket",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "event",
+            "type": "pubkey"
+          },
+          {
+            "name": "buyer",
+            "type": "pubkey"
+          },
+          {
+            "name": "ticket_id",
+            "type": "u32"
+          },
+          {
+            "name": "purchase_time",
+            "type": "i64"
+          },
+          {
+            "name": "check_in_time",
+            "type": {
+              "option": "i64"
+            }
+          },
+          {
+            "name": "is_used",
+            "type": "bool"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    }
+  ]
+}

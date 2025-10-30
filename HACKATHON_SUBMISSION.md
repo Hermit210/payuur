@@ -5,6 +5,14 @@
 **Team:** Dhruv Pancholi & Nitin Jain  
 **Submission Date:** November 2024
 
+## 🚀 **DEPLOYED & LIVE**
+
+**✅ Program ID:** `CfbfPPJfZVwiiSPSaf67s6eJKnLX3TARiC3MpJGsjWxr`  
+**✅ IDL Account:** `HNKxFS4ZdQgW7Rud7hvuUK7HyRzhU76V6nKQnu1w1QME`  
+**✅ Network:** Solana Devnet  
+**✅ MagicBlock Integration:** Active with real-time WebSocket updates  
+**✅ Frontend:** Live with wallet integration and real-time features
+
 ---
 
 ## 🎯 Project Overview

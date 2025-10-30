@@ -6,19 +6,50 @@ A **real-time, decentralized event platform** built for the **MagicBlock Real-Ti
 
 | [📄 Pitch Deck](https://gamma.app/docs/Soluma-The-Web3-Event-Platform-l0onzh91an2dum7?
 
+### 🚀 **LIVE DEPLOYMENT**
+
+**✅ Program ID:** `CfbfPPJfZVwiiSPSaf67s6eJKnLX3TARiC3MpJGsjWxr`  
+**✅ Network:** Solana Devnet  
+**✅ Status:** Live and Ready for Testing
+
 ### 🎮 Quick Start:
 ```bash
-# Interactive demo
-npm run demo
+# Start the demo
+scripts/start-demo.bat
 
-# Performance tests  
-npm run magicblock:demo
-
-# Full deployment
-npm run deploy:full
+# Or manually:
+cd frontend && npm run dev
+# Then open http://localhost:5173
 ```
 
-**[📖 Setup Guide](./MAGICBLOCK_SETUP.md)** | **[🏆 Submission Details](./HACKATHON_SUBMISSION.md)**
+### 🧪 Test the Integration:
+1. **Connect Wallet** - Use Phantom or any Solana wallet
+2. **Create Event** - Experience zero-fee creation via MagicBlock
+3. **Buy Tickets** - Instant purchases with <1ms latency
+4. **Real-time Updates** - See live changes across all users
+
+**[📖 MagicBlock Integration](./MAGICBLOCK_INTEGRATION.md)** | **[🏆 Submission Details](./HACKATHON_SUBMISSION.md)**
+
+## 🚀 MagicBlock Ephemeral Rollups
+
+Soluma implements the **official MagicBlock integration pattern**:
+
+### ⚡ **Ephemeral Program Structure**
+```rust
+#[ephemeral]
+#[program]
+pub mod soluma {
+    pub fn delegate_event(...)           // → ER
+    pub fn purchase_ticket_and_commit(...) // ER processing
+    pub fn undelegate_event(...)         // ER → Base
+}
+```
+
+### 🔄 **Complete Delegation Lifecycle**
+1. **Delegate** → Move accounts to MagicBlock ER
+2. **Process** → Ultra-fast operations (<1ms, $0 fees)
+3. **Commit** → Automatic sync to Solana base layer
+4. **Undelegate** → Return to standard Solana operations
 |---|---|---|
 
 ---

@@ -1,0 +1,14 @@
+C:\Users\salon\OneDrive\Desktop\payuur\soLuma-main\target\debug\deps\serde-e10320a1070d3444.d: C:\Users\salon\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\lib.rs C:\Users\salon\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\integer128.rs C:\Users\salon\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\mod.rs C:\Users\salon\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\de.rs C:\Users\salon\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\ser.rs C:\Users\salon\OneDrive\Desktop\payuur\soLuma-main\target\debug\build\serde-552f5ef8a151674b\out/private.rs
+
+C:\Users\salon\OneDrive\Desktop\payuur\soLuma-main\target\debug\deps\libserde-e10320a1070d3444.rlib: C:\Users\salon\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\lib.rs C:\Users\salon\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\integer128.rs C:\Users\salon\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\mod.rs C:\Users\salon\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\de.rs C:\Users\salon\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\ser.rs C:\Users\salon\OneDrive\Desktop\payuur\soLuma-main\target\debug\build\serde-552f5ef8a151674b\out/private.rs
+
+C:\Users\salon\OneDrive\Desktop\payuur\soLuma-main\target\debug\deps\libserde-e10320a1070d3444.rmeta: C:\Users\salon\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\lib.rs C:\Users\salon\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\integer128.rs C:\Users\salon\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\mod.rs C:\Users\salon\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\de.rs C:\Users\salon\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\ser.rs C:\Users\salon\OneDrive\Desktop\payuur\soLuma-main\target\debug\build\serde-552f5ef8a151674b\out/private.rs
+
+C:\Users\salon\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\lib.rs:
+C:\Users\salon\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\integer128.rs:
+C:\Users\salon\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\mod.rs:
+C:\Users\salon\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\de.rs:
+C:\Users\salon\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\ser.rs:
+C:\Users\salon\OneDrive\Desktop\payuur\soLuma-main\target\debug\build\serde-552f5ef8a151674b\out/private.rs:
+
+# env-dep:OUT_DIR=C:\\Users\\salon\\OneDrive\\Desktop\\payuur\\soLuma-main\\target\\debug\\build\\serde-552f5ef8a151674b\\out

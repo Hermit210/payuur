@@ -1,0 +1,31 @@
+[features]
+seeds = false
+skip-lint = false
+
+[programs.localnet]
+soluma = "CfbfPPJfZVwiiSPSaf67s6eJKnLX3TARiC3MpJGsjWxr"
+
+[programs.devnet]
+soluma = "CfbfPPJfZVwiiSPSaf67s6eJKnLX3TARiC3MpJGsjWxr"
+
+[programs.mainnet]
+soluma = "CfbfPPJfZVwiiSPSaf67s6eJKnLX3TARiC3MpJGsjWxr"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "Devnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
+
+[workspace]
+members = [
+    "programs/soluma"
+]
+
+[toolchain]
+anchor_version = "0.32.1"
+solana_version = "1.18.26"

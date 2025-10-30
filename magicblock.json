@@ -1,0 +1,32 @@
+{
+  "network": "devnet",
+  "chain": "solana",
+  "programId": "CfbfPPJfZVwiiSPSaf67s6eJKnLX3TARiC3MpJGsjWxr",
+  "websocket": "wss://api.devnet.solana.com",
+  "projectName": "soLuma",
+  "magicblock": {
+    "enabled": true,
+    "validator": "https://devnet.magicblock.app",
+    "ephemeralRollup": {
+      "enabled": true,
+      "autoDelegate": false,
+      "commitFrequency": 1000,
+      "maxTransactions": 100
+    },
+    "features": {
+      "zeroFees": true,
+      "instantFinality": true,
+      "ultraLowLatency": true,
+      "realTimeUpdates": true
+    }
+  },
+  "solana": {
+    "commitment": "confirmed",
+    "rpcUrl": "https://api.devnet.solana.com",
+    "wsUrl": "wss://api.devnet.solana.com"
+  },
+  "accounts": {
+    "eventSeeds": ["event"],
+    "ticketSeeds": ["ticket"]
+  }
+}

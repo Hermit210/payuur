@@ -1,5 +1,19 @@
-{
-  "projects": {
-    "default": "soluma-faa71"
-  }
-}
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBnBzWxAXg0jGcSs4cEp7gl-naXkjGOV3c",
+  authDomain: "soluma-main.firebaseapp.com",
+  projectId: "soluma-main",
+  storageBucket: "soluma-main.appspot.com", // ✅ fixed this line
+  messagingSenderId: "565804835931",
+  appId: "1:565804835931:web:819a06a27d4025a5280b7e",
+  measurementId: "G-EJM99Y94V2"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
