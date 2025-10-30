@@ -65,9 +65,10 @@ idl-build = ["anchor-lang/idl-build"]
 
 **File: `frontend/package.json`**
 
-✅ **MagicBlock SDK**:
-```json
-"@magicblock-labs/ephemeral-rollups-sdk": "^0.3.7"
+✅ **MagicBlock SDK** (Mock Implementation):
+```typescript
+// Custom mock implementation in frontend/src/lib/magicblock-sdk.ts
+// Simulates MagicBlock's ephemeral rollup functionality
 ```
 
 **File: `frontend/src/config/soluma.ts`**

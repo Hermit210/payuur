@@ -1,7 +1,6 @@
 // MagicBlock Ephemeral Rollups Integration
-import { Connection, PublicKey, Transaction, Keypair } from '@solana/web3.js';
-import { Program, AnchorProvider, Wallet } from '@coral-xyz/anchor';
-import { MAGICBLOCK_CONFIG, SOLANA_CONFIG, PROGRAM_ID } from '../config/soluma';
+import { Connection, PublicKey, Transaction, Keypair, Signer, SendOptions } from '@solana/web3.js';
+import { MAGICBLOCK_CONFIG } from '../config/soluma';
 
 export interface MagicBlockEvent {
     type: 'event_created' | 'ticket_purchased' | 'ticket_checked_in' | 'capacity_updated';
@@ -133,11 +132,8 @@ export class MagicBlockService {
      */
     async sendTransaction(
         transaction: Transaction,
-        signers: Keypair[],
-        options?: {
-            skipPreflight?: boolean;
-            commitment?: 'processed' | 'confirmed' | 'finalized';
-        }
+        signers: Signer[],
+        options?: SendOptions
     ): Promise<string> {
         try {
             // In a real implementation, this would route through MagicBlock's ER

@@ -32,7 +32,9 @@ cd frontend && npm run dev
 
 ## 🚀 MagicBlock Ephemeral Rollups
 
-Soluma implements the **official MagicBlock integration pattern**:
+Soluma implements the **official MagicBlock integration pattern** with a **mock SDK implementation** for demonstration purposes:
+
+> **Note**: This project uses a custom mock implementation of the MagicBlock SDK (`frontend/src/lib/magicblock-sdk.ts`) to simulate ephemeral rollup functionality, as the official SDK is not yet publicly available.
 
 ### ⚡ **Ephemeral Program Structure**
 ```rust
