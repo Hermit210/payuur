@@ -14,13 +14,17 @@ A **real-time, decentralized event platform** built for the **MagicBlock Real-Ti
 
 ### 🎮 Quick Start:
 ```bash
-# Start the demo
-scripts/start-demo.bat
+# Install dependencies (fixed for deployment)
+scripts/install-dependencies.bat  # Windows
+# OR
+./scripts/install-dependencies.sh # Linux/Mac
 
-# Or manually:
-cd frontend && npm run dev
+# Start the demo
+npm run dev:frontend
 # Then open http://localhost:5173
 ```
+
+**📋 [Complete Deployment Guide](./DEPLOYMENT_GUIDE.md)** - Step-by-step setup instructions
 
 ### 🧪 Test the Integration:
 1. **Connect Wallet** - Use Phantom or any Solana wallet
