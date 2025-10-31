@@ -97,7 +97,28 @@ export default function OrganizerDashboard() {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      <div className="relative flex">
+      {/* 3D Background Elements */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full">
+          {/* Floating 3D Elements */}
+          <div className="absolute top-20 right-10 w-40 h-40 bg-white opacity-[0.02] rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-20 left-10 w-32 h-32 bg-white opacity-[0.025] rounded-full blur-2xl animate-float" style={{animationDelay: '3s'}}></div>
+          
+          {/* Subtle Grid Pattern */}
+          <div 
+            className="absolute inset-0 opacity-[0.015]"
+            style={{
+              backgroundImage: `
+                linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
+              `,
+              backgroundSize: '60px 60px'
+            }}
+          ></div>
+        </div>
+      </div>
+
+      <div className="relative flex z-10">
         <OrganizerSidebar
           sidebarOpen={sidebarOpen}
           setSidebarOpen={setSidebarOpen}
@@ -105,10 +126,10 @@ export default function OrganizerDashboard() {
         />
 
         <div className="flex-1 lg:ml-64">
-          <div className="lg:hidden flex items-center justify-between p-4 border-b border-gray-800">
+          <div className="lg:hidden flex items-center justify-between p-4 border-b border-gray-800 panel-3d">
              <a href="/" className="inline-flex items-center cursor-pointer group">
                <img src={logo} alt="Soluma Logo" className="h-8 w-8 mr-2" />
-               <span className="text-xl font-bold tracking-tight">
+               <span className="text-xl font-bold tracking-tight text-3d">
                  <span className="text-white group-hover:text-cyan-300 transition-colors duration-200">
                    Solu
                  </span>
@@ -119,7 +140,7 @@ export default function OrganizerDashboard() {
              </a>
             <button
               onClick={() => setSidebarOpen(true)}
-              className="p-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors"
+              className="btn-3d p-2 rounded-lg"
             >
               <Menu className="w-6 h-6" />
             </button>

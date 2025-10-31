@@ -42,10 +42,10 @@ export const FastDashboard: React.FC = () => {
       {/* Header */}
       <div className="text-center space-y-4">
         <div className="flex items-center justify-center gap-2">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent text-3d-bold">
             Soluma Dashboard
           </h1>
-          <Badge className="bg-green-500/20 text-green-400 border-green-500/30">
+          <Badge className="bg-green-500/20 text-green-400 border-green-500/30 animate-pulse-glow">
             <Zap className="w-4 h-4 mr-1" />
             LIVE
           </Badge>
@@ -55,12 +55,12 @@ export const FastDashboard: React.FC = () => {
 
       {/* Real-time Stats powered by MagicBlock */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <Card className="bg-gradient-to-br from-blue-900/20 to-blue-800/20 border-blue-700/30">
+        <Card className="card-3d bg-gradient-to-br from-blue-900/20 to-blue-800/20 border-blue-700/30 glow-white">
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-blue-400 text-sm font-medium">Total Events</p>
-                <p className="text-3xl font-bold text-white">0</p>
+                <p className="text-blue-400 text-sm font-medium text-3d">Total Events</p>
+                <p className="text-3xl font-bold text-white text-3d-bold">0</p>
                 <p className="text-xs text-blue-300">Create your first event</p>
               </div>
               <Calendar className="w-8 h-8 text-blue-400" />
@@ -68,12 +68,12 @@ export const FastDashboard: React.FC = () => {
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-green-900/20 to-green-800/20 border-green-700/30">
+        <Card className="card-3d bg-gradient-to-br from-green-900/20 to-green-800/20 border-green-700/30 glow-white">
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-green-400 text-sm font-medium">Revenue (SOL)</p>
-                <p className="text-3xl font-bold text-white">0.00</p>
+                <p className="text-green-400 text-sm font-medium text-3d">Revenue (SOL)</p>
+                <p className="text-3xl font-bold text-white text-3d-bold">0.00</p>
                 <p className="text-xs text-green-300">Real-time tracking</p>
               </div>
               <DollarSign className="w-8 h-8 text-green-400" />
@@ -81,12 +81,12 @@ export const FastDashboard: React.FC = () => {
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-purple-900/20 to-purple-800/20 border-purple-700/30">
+        <Card className="card-3d bg-gradient-to-br from-purple-900/20 to-purple-800/20 border-purple-700/30 glow-white">
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-purple-400 text-sm font-medium">Tickets Sold</p>
-                <p className="text-3xl font-bold text-white">0</p>
+                <p className="text-purple-400 text-sm font-medium text-3d">Tickets Sold</p>
+                <p className="text-3xl font-bold text-white text-3d-bold">0</p>
                 <p className="text-xs text-purple-300">Ultra-low latency updates</p>
               </div>
               <Ticket className="w-8 h-8 text-purple-400" />
@@ -94,12 +94,12 @@ export const FastDashboard: React.FC = () => {
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-orange-900/20 to-orange-800/20 border-orange-700/30">
+        <Card className="card-3d bg-gradient-to-br from-orange-900/20 to-orange-800/20 border-orange-700/30 glow-white">
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-orange-400 text-sm font-medium">Active Users</p>
-                <p className="text-3xl font-bold text-white">0</p>
+                <p className="text-orange-400 text-sm font-medium text-3d">Active Users</p>
+                <p className="text-3xl font-bold text-white text-3d-bold">0</p>
                 <p className="text-xs text-orange-300">MagicBlock powered</p>
               </div>
               <Users className="w-8 h-8 text-orange-400" />
@@ -110,39 +110,39 @@ export const FastDashboard: React.FC = () => {
 
       {/* Quick Actions */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Card className="bg-gray-900/50 border-gray-800 hover:border-blue-500/50 transition-all duration-200">
+        <Card className="card-3d panel-3d hover:border-blue-500/50 transition-all duration-200">
           <CardContent className="p-6 text-center">
             <Plus className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-            <h3 className="text-lg font-semibold text-white mb-2">Create Event</h3>
+            <h3 className="text-lg font-semibold text-white text-3d mb-2">Create Event</h3>
             <p className="text-sm text-gray-400 mb-4">Launch your next event on Solana</p>
             <Link to="/dashboard/events/new">
-              <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+              <Button className="btn-3d-primary w-full">
                 Get Started
               </Button>
             </Link>
           </CardContent>
         </Card>
 
-        <Card className="bg-gray-900/50 border-gray-800 hover:border-green-500/50 transition-all duration-200">
+        <Card className="card-3d panel-3d hover:border-green-500/50 transition-all duration-200">
           <CardContent className="p-6 text-center">
             <Calendar className="w-12 h-12 text-green-400 mx-auto mb-4" />
-            <h3 className="text-lg font-semibold text-white mb-2">Explore Events</h3>
+            <h3 className="text-lg font-semibold text-white text-3d mb-2">Explore Events</h3>
             <p className="text-sm text-gray-400 mb-4">Discover amazing events</p>
             <Link to="/dashboard/explore">
-              <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
+              <Button className="btn-3d w-full bg-green-600 hover:bg-green-700 text-white">
                 Explore
               </Button>
             </Link>
           </CardContent>
         </Card>
 
-        <Card className="bg-gray-900/50 border-gray-800 hover:border-purple-500/50 transition-all duration-200">
+        <Card className="card-3d panel-3d hover:border-purple-500/50 transition-all duration-200">
           <CardContent className="p-6 text-center">
             <Ticket className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-            <h3 className="text-lg font-semibold text-white mb-2">My Tickets</h3>
+            <h3 className="text-lg font-semibold text-white text-3d mb-2">My Tickets</h3>
             <p className="text-sm text-gray-400 mb-4">View your purchased tickets</p>
             <Link to="/dashboard/tickets">
-              <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white">
+              <Button className="btn-3d w-full bg-purple-600 hover:bg-purple-700 text-white">
                 View Tickets
               </Button>
             </Link>

@@ -260,21 +260,7 @@ export default function NavBar() {
         </div>
       </div>
 
-      <nav
-        className={`sticky top-0 z-50 transition-all duration-300 ${
-          isScrolled ? "border-b border-white/5" : "bg-black border-b border-transparent"
-        }`}
-        style={
-          isScrolled
-            ? {
-                background: "linear-gradient(135deg, rgba(10, 10, 10, 0.7) 0%, rgba(15, 15, 15, 0.75) 100%)",
-                backdropFilter: "blur(24px) saturate(150%)",
-                WebkitBackdropFilter: "blur(24px) saturate(150%)",
-                boxShadow: "0 8px 32px 0 rgba(0,0,0,0.37), inset 0 1px 0 0 rgba(255,255,255,0.05)",
-              }
-            : {}
-        }
-      >
+      <nav className={`nav-3d sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'shadow-3d' : ''}`}>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex h-16 items-center">
             <div className="flex flex-1 items-center justify-between">
