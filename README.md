@@ -4,7 +4,7 @@ A **real-time, decentralized event platform** built for the **MagicBlock Real-Ti
 
 **🏆 Hackathon Submission for 12.5k USDC Prize Pool**
 
-| [📄 Pitch Deck](https://gamma.app/docs/Soluma-The-Web3-Event-Platform-l0onzh91an2dum7?
+|
 
 ### 🚀 **LIVE DEPLOYMENT**
 
