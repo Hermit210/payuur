@@ -1,18 +1,15 @@
-# 🌐 payuur: The Cypherpunk Event Platform
+#  payuur: The Cypherpunk Event Platform
 
 A **real-time, decentralized event platform** built for the **MagicBlock Real-Time Side Track** of the **Cypherpunk Hackathon**. Combining cutting-edge real-time analytics with cypherpunk privacy principles on Solana.
 
-**🏆 Hackathon Submission for 12.5k USDC Prize Pool**
 
-|
+###  **LIVE DEPLOYMENT**
 
-### 🚀 **LIVE DEPLOYMENT**
+**Program ID:** `CfbfPPJfZVwiiSPSaf67s6eJKnLX3TARiC3MpJGsjWxr`  
+** Network:** Solana Devnet  
+** Status:** Live and Ready for Testing
 
-**✅ Program ID:** `CfbfPPJfZVwiiSPSaf67s6eJKnLX3TARiC3MpJGsjWxr`  
-**✅ Network:** Solana Devnet  
-**✅ Status:** Live and Ready for Testing
-
-### 🎮 Quick Start:
+###  Quick Start:
 ```bash
 # Install dependencies (fixed for deployment)
 scripts/install-dependencies.bat  # Windows
@@ -24,7 +21,7 @@ npm run dev:frontend
 # Then open http://localhost:5173
 ```
 
-**📋 [Complete Deployment Guide](./DEPLOYMENT_GUIDE.md)** - Step-by-step setup instructions
+** [Complete Deployment Guide](./DEPLOYMENT_GUIDE.md)** - Step-by-step setup instructions
 
 ### 🧪 Test the Integration:
 1. **Connect Wallet** - Use Phantom or any Solana wallet
@@ -32,15 +29,8 @@ npm run dev:frontend
 3. **Buy Tickets** - Instant purchases with <1ms latency
 4. **Real-time Updates** - See live changes across all users
 
-**[📖 MagicBlock Integration](./MAGICBLOCK_INTEGRATION.md)** | **[🏆 Submission Details](./HACKATHON_SUBMISSION.md)**
 
-## 🚀 MagicBlock Ephemeral Rollups
-
-Soluma implements the **official MagicBlock integration pattern** with a **mock SDK implementation** for demonstration purposes:
-
-> **Note**: This project uses a custom mock implementation of the MagicBlock SDK (`frontend/src/lib/magicblock-sdk.ts`) to simulate ephemeral rollup functionality, as the official SDK is not yet publicly available.
-
-### ⚡ **Ephemeral Program Structure**
+###  **Ephemeral Program Structure**
 ```rust
 #[ephemeral]
 #[program]
@@ -51,7 +41,7 @@ pub mod soluma {
 }
 ```
 
-### 🔄 **Complete Delegation Lifecycle**
+###  **Complete Delegation Lifecycle**
 1. **Delegate** → Move accounts to MagicBlock ER
 2. **Process** → Ultra-fast operations (<1ms, $0 fees)
 3. **Commit** → Automatic sync to Solana base layer
@@ -60,22 +50,16 @@ pub mod soluma {
 
 ---
 
-## 🎯 Cypherpunk Hackathon Submission: MagicBlock Real-Time Side Track
 
-**Prize Track:** MagicBlock Real-Time Side Track  
-**Total Prize Pool:** 12.5k USDC (1st: 5k, 2nd: 3k, 3rd: 2k, 4th: 2.5k)  
-**Skills:** ✅ Blockchain ✅ Frontend ✅ Backend  
-**Deadline:** November 14, 2025
+###  Why Soluma Wins This Track:
 
-### 🔥 Why Soluma Wins This Track:
 
-1. **MagicBlock Integration**: Ultra-low latency (&lt;1ms) real-time engine with ephemeral rollup technology
 2. **Real-Time Analytics**: Live ticket sales, attendee tracking, revenue monitoring with zero-latency updates
 3. **Cypherpunk Security**: Privacy-first design, censorship-resistant, decentralized architecture
 4. **Solana Native**: Fast transactions, low fees, native wallet integration with elastic scalability
 5. **Full-Stack Excellence**: React frontend, Node.js backend, Solana blockchain, MagicBlock real-time engine
 
-### 🏆 Targeted Prize Tracks
+###  Targeted Prize Tracks
 
 We are primarily competing for the following tracks where Soluma excels:
 
@@ -87,7 +71,7 @@ We are primarily competing for the following tracks where Soluma excels:
 
 ---
 
-## 🎯 The Problem
+##  The Problem
 
 Event ticketing is centralized, expensive for organizers, and insecure for attendees. Traditional platforms control user data, charge high fees, and suffer from fraud. Existing Web3 solutions are often too complex for everyday users, requiring browser extensions and seed phrase management.
 
@@ -98,19 +82,6 @@ Soluma solves this by offering a hybrid Web2 + Web3 platform. We use **MetaMask 
 -   **For Organizers:** Create events and receive payments directly to your wallet in seconds with near-zero fees.
 -   **For Attendees:** Buy tickets with a simple QR scan using **Solana Pay**. Your ticket is a secure, on-chain asset you truly own.
 
----
-
-## 📋 How We Meet the Hackathon Requirements
-
-| Requirement | How Soluma Meets It |
-| :--- | :--- |
-| **MetaMask Embedded Wallet SDK** | ✅ **Integrated.** We use the `@web3auth/modal` React SDK for instant, seedless wallet creation via social/email logins. Users never see a seed phrase. |
-| **Deployed on Solana** | ✅ **Deployed.** The entire ticketing and payment logic is built on the Solana Devnet, leveraging its speed and low transaction costs. |
-| **Working Demo** | ✅ **Available.** A live demo is linked above, showcasing the full user flow from event creation to ticket verification. |
-| **Source Code Access** | ✅ **Public.** The complete source code is available in this repository with clear setup instructions. |
-| **Pitch & Documentation** | ✅ **Included.** This README serves as our documentation and pitch, outlining the problem, solution, and technical execution. |
-
----
 
 ## 🛠️ Technical Architecture & Key Features
 
@@ -232,11 +203,5 @@ FIREBASE_SERVICE_ACCOUNT_KEY='<YOUR_FIREBASE_SERVICE_ACCOUNT_KEY_JSON>'
     -   In the frontend directory: `npm run dev`
     -   In the backend directory: `node server.js`
 
----
 
-## 🧑‍💻 The Team
-* **Dhruv Pancholi** ([dpancholi.pp123@gmail.com](mailto:dpancholi.pp123@gmail.com))
-* **Nitin Jain**
-
----
 
