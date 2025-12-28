@@ -23,7 +23,7 @@ npm run dev:frontend
 
 ** [Complete Deployment Guide](./DEPLOYMENT_GUIDE.md)** - Step-by-step setup instructions
 
-### 🧪 Test the Integration:
+###  Test the Integration:
 1. **Connect Wallet** - Use Phantom or any Solana wallet
 2. **Create Event** - Experience zero-fee creation via MagicBlock
 3. **Buy Tickets** - Instant purchases with <1ms latency
