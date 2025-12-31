@@ -85,7 +85,7 @@ payuur solves this by offering a hybrid Web2 + Web3 platform. We use **MetaMask 
 
 ## 🛠️ Technical Architecture & Key Features
 
-Soluma's hybrid architecture uses Firebase for non-critical metadata and the **Solana blockchain as the single source of truth** for payments and ticket ownership.
+payuur's hybrid architecture uses Firebase for non-critical metadata and the **Solana blockchain as the single source of truth** for payments and ticket ownership.
 
 ### User Flow
 1.  **Onboarding (Web3Auth):** A user signs up with their email. Web3Auth instantly generates a non-custodial Solana wallet in the background.
