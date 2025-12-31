@@ -1,6 +1,6 @@
 #  payuur: The  Event planning  Platform for web3
 
-A **real-time, decentralized event platform** built for the **MagicBlock Real-Time Side Track** of the **Cypherpunk Hackathon**. Combining cutting-edge real-time analytics with cypherpunk privacy principles on Solana.
+A **real-time, decentralized event platform** built for the  of the  Combining cutting-edge real-time analytics with cypherpunk privacy principles on Solana.
 
 
 ###  **LIVE DEPLOYMENT**
