@@ -51,7 +51,7 @@ pub mod soluma {
 ---
 
 
-###  Why Soluma Wins This Track:
+###  Why  payuur Wins This Track:
 
 
 2. **Real-Time Analytics**: Live ticket sales, attendee tracking, revenue monitoring with zero-latency updates
@@ -59,7 +59,7 @@ pub mod soluma {
 4. **Solana Native**: Fast transactions, low fees, native wallet integration with elastic scalability
 5. **Full-Stack Excellence**: React frontend, Node.js backend, Solana blockchain, MagicBlock real-time engine
 
-###  Targeted Prize Tracks
+
 
 We are primarily competing for the following tracks where Soluma excels:
 
@@ -75,9 +75,9 @@ We are primarily competing for the following tracks where Soluma excels:
 
 Event ticketing is centralized, expensive for organizers, and insecure for attendees. Traditional platforms control user data, charge high fees, and suffer from fraud. Existing Web3 solutions are often too complex for everyday users, requiring browser extensions and seed phrase management.
 
-## ✅ Our Solution: Soluma
+## ✅ Our Solution: payuur
 
-Soluma solves this by offering a hybrid Web2 + Web3 platform. We use **MetaMask Embedded Wallets (via the Web3Auth SDK)** to provide a frictionless, "seedless" onboarding experience. Users sign up with an email or social account and get a non-custodial Solana wallet without even knowing it.
+payuur solves this by offering a hybrid Web2 + Web3 platform. We use **MetaMask Embedded Wallets (via the Web3Auth SDK)** to provide a frictionless, "seedless" onboarding experience. Users sign up with an email or social account and get a non-custodial Solana wallet without even knowing it.
 
 -   **For Organizers:** Create events and receive payments directly to your wallet in seconds with near-zero fees.
 -   **For Attendees:** Buy tickets with a simple QR scan using **Solana Pay**. Your ticket is a secure, on-chain asset you truly own.
@@ -161,8 +161,8 @@ function makePayURL({ recipient, amount, reference, splToken }) {
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/Dhruv-2003/Soluma.git](https://github.com/Dhruv-2003/Soluma.git)
-    cd soluma
+    git clone [https://github.com/Hermit210/payuur.git](https://github.com/Hermit210/payuur.git)
+    cd payuur
     ```
 2.  **Install frontend dependencies:**
     ```bash
