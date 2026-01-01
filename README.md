@@ -21,7 +21,7 @@ npm run dev:frontend
 # Then open http://localhost:5173
 ```
 
-** [Complete Deployment Guide](./DEPLOYMENT_GUIDE.md)** - Step-by-step setup instructions
+- Step-by-step setup instructions
 
 ###  Test the Integration:
 1. **Connect Wallet** - Use Phantom or any Solana wallet
