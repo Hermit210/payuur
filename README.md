@@ -75,7 +75,7 @@ We are primarily competing for the following tracks where Soluma excels:
 
 Event ticketing is centralized, expensive for organizers, and insecure for attendees. Traditional platforms control user data, charge high fees, and suffer from fraud. Existing Web3 solutions are often too complex for everyday users, requiring browser extensions and seed phrase management.
 
-## ✅ Our Solution: payuur
+##  Our Solution: payuur
 
 payuur solves this by offering a hybrid Web2 + Web3 platform. We use **MetaMask Embedded Wallets (via the Web3Auth SDK)** to provide a frictionless, "seedless" onboarding experience. Users sign up with an email or social account and get a non-custodial Solana wallet without even knowing it.
 
@@ -149,7 +149,7 @@ function makePayURL({ recipient, amount, reference, splToken }) {
 ```
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 -   Node.js & npm
