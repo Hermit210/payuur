@@ -9,7 +9,7 @@ A **real-time, decentralized event platform** built for the  of the  Combining c
 ** Network:** Solana Devnet  
 ** Status:** Live and Ready for Testing
 
-###  Quick Start:
+## Quick Start:
 ```bash
 # Install dependencies (fixed for deployment)
 scripts/install-dependencies.bat  # Windows
