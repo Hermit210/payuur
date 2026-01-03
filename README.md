@@ -41,7 +41,7 @@ pub mod soluma {
 }
 ```
 
-###  **Complete Delegation Lifecycle**
+##  **Complete Delegation Lifecycle**
 1. **Delegate** → Move accounts to MagicBlock ER
 2. **Process** → Ultra-fast operations (<1ms, $0 fees)
 3. **Commit** → Automatic sync to Solana base layer
@@ -87,16 +87,16 @@ payuur solves this by offering a hybrid Web2 + Web3 platform. We use **MetaMask 
 
 payuur's hybrid architecture uses Firebase for non-critical metadata and the **Solana blockchain as the single source of truth** for payments and ticket ownership.
 
-### User Flow
+## User Flow
 1.  **Onboarding (Web3Auth):** A user signs up with their email. Web3Auth instantly generates a non-custodial Solana wallet in the background.
 2.  **Event Creation (React/Firebase):** An organizer creates an event. The details are stored in Firestore.
 3.  **Payment URL (Node.js/Solana Pay):** Our backend generates a unique Solana Pay URL for the ticket price, pointing to the organizer's wallet.
 4.  **Purchase (Solana Pay):** An attendee scans the QR code and approves the transaction from any Solana wallet.
 5.  **Verification (Node.js/Solana):** At the venue, an organizer scans the attendee's QR ticket. Our backend verifies the transaction signature on the Solana blockchain in real-time to grant entry. This prevents fraud and double-spending.
 
-### Code Highlights
+## Code Highlights
 
-#### 1. Frictionless Onboarding with Web3Auth
+### 1. Frictionless Onboarding with Web3Auth
 We configured the Web3Auth modal to create a Solana-native wallet and hide all complex/irrelevant options, ensuring a pure Web2-like experience.
 
 ```typescript
@@ -123,7 +123,7 @@ export const web3AuthContextConfig = {
 };
 
 ```
-#### 2. Dynamic Solana Pay URL Generation
+### 2. Dynamic Solana Pay URL Generation
 We create transaction requests on the fly, embedding event and payment details directly into the QR code. This is central to our "Best Use of Solana Pay" claim.
 
 ```typescript
@@ -151,13 +151,13 @@ function makePayURL({ recipient, amount, reference, splToken }) {
 
 ##  Getting Started
 
-### Prerequisites
+## Prerequisites
 -   Node.js & npm
 -   A Firebase project with Firestore enabled
 -   A Web3Auth project Client ID
 -   A Cloudinary account for image hosting
 
-### Installation & Setup
+## Installation & Setup
 
 1.  **Clone the repository:**
     ```bash
