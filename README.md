@@ -123,7 +123,7 @@ export const web3AuthContextConfig = {
 };
 
 ```
-### 2. Dynamic Solana Pay URL Generation
+## 2. Dynamic Solana Pay URL Generation
 We create transaction requests on the fly, embedding event and payment details directly into the QR code. This is central to our "Best Use of Solana Pay" claim.
 
 ```typescript
