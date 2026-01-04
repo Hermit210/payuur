@@ -96,7 +96,7 @@ payuur's hybrid architecture uses Firebase for non-critical metadata and the **S
 
 ## Code Highlights
 
-### 1. Frictionless Onboarding with Web3Auth
+## 1. Frictionless Onboarding with Web3Auth
 We configured the Web3Auth modal to create a Solana-native wallet and hide all complex/irrelevant options, ensuring a pure Web2-like experience.
 
 ```typescript
