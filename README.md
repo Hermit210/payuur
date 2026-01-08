@@ -39,7 +39,7 @@ pub mod soluma {
     pub fn purchase_ticket_and_commit(...) // ER processing
     pub fn undelegate_event(...)         // ER → Base
 }
-```
+
 
 ##  **Complete Delegation Lifecycle**
 1. **Delegate** → Move accounts to MagicBlock ER
