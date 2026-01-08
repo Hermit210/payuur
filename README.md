@@ -200,8 +200,8 @@ ALLOWED_ORIGINS="<YOUR_FRONTEND_URL>"
 FIREBASE_SERVICE_ACCOUNT_KEY='<YOUR_FIREBASE_SERVICE_ACCOUNT_KEY_JSON>'
 ```
 5.  **Run the development servers:**
-    -   In the frontend directory: `npm run dev`
-    -   In the backend directory: `node server.js`
+    -  In the frontend directory: `npm run dev`
+      -     In the backend directory: `node server.js`
 
 
 
