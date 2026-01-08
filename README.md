@@ -46,10 +46,6 @@ pub mod soluma {
 2. **Process** → Ultra-fast operations (<1ms, $0 fees)
 3. **Commit** → Automatic sync to Solana base layer
 4. **Undelegate** → Return to standard Solana operations
-|---|---|---|
-
----
-
 
 
 
