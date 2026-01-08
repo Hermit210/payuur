@@ -30,7 +30,7 @@ npm run dev:frontend
 4. **Real-time Updates** - See live changes across all users
 
 
-##  **Ephemeral Program Structure**
+##  Ephemeral Program Structure
 ```rust
 #[ephemeral]
 #[program]
