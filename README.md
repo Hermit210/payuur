@@ -171,7 +171,7 @@ function makePayURL({ recipient, amount, reference, splToken }) {
     ```
 4.  **Set up environment variables:**
     -   Create a `.env` file in the frontend root and populate it with your keys (Firebase, Web3Auth, etc.).
-    -   Create a `.env` file in the backend root and populate it.
+    - Create a `.env` file in the backend root and populate it.
   frontend env
 ```bash
 VITE_WEB3AUTH_CLIENT_ID="<YOUR_WEB3AUTH_CLIENT_ID>"
