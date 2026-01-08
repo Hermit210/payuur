@@ -59,10 +59,10 @@ pub mod soluma {
 
 We are primarily competing for the following tracks where Soluma excels:
 
-* ** Solana Everyday Impact: Consumer & Community App**
+ ** Solana Everyday Impact: Consumer & Community App**
     * **Why?** Soluma is a practical consumer application that makes a common activity—event ticketing—more democratic, secure, and user-empowering on Solana. It's designed for mainstream adoption.
 
-* ** Best Use of Solana Pay**
+ ** Best Use of Solana Pay**
     * **Why?** Solana Pay is the core of our payment and ticketing mechanism. We use it not just for payments but as the foundation for generating verifiable, on-chain tickets via QR codes.
 
 ---
