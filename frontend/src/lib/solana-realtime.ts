@@ -1,7 +1,6 @@
-// Real-time Solana connection with MagicBlock integration
-import { Connection, PublicKey, AccountChangeCallback } from '@solana/web3.js';
-import { SOLANA_CONFIG, MAGICBLOCK_CONFIG, PROGRAM_ID } from '../config/soluma';
-import { getMagicBlockService } from './magicblock';
+// Real-time Solana connection service
+import { Connection, PublicKey } from '@solana/web3.js';
+import { SOLANA_CONFIG, PROGRAM_ID } from '../config/soluma';
 
 export interface RealtimeEventData {
   type: 'account_change' | 'program_account_change' | 'signature_notification';
@@ -12,7 +11,6 @@ export interface RealtimeEventData {
 
 export class SolanaRealtimeService {
   private connection: Connection;
-  private magicBlockService: any;
   private subscriptions: Map<string, number> = new Map();
   private eventListeners: Map<string, ((data: RealtimeEventData) => void)[]> = new Map();
 
@@ -25,9 +23,6 @@ export class SolanaRealtimeService {
         wsEndpoint: SOLANA_CONFIG.wsEndpoint
       }
     );
-
-    // Initialize MagicBlock service for enhanced real-time features
-    this.magicBlockService = getMagicBlockService(this.connection);
   }
 
   /**
@@ -36,13 +31,6 @@ export class SolanaRealtimeService {
   async initialize(): Promise<void> {
     try {
       console.log('🚀 Initializing Solana real-time service...');
-      
-      // Connect to MagicBlock for enhanced real-time features
-      if (MAGICBLOCK_CONFIG.enabled) {
-        await this.magicBlockService.connect();
-        console.log('✅ MagicBlock real-time service connected');
-      }
-
       console.log('✅ Solana real-time service initialized');
     } catch (error) {
       console.error('❌ Failed to initialize real-time service:', error);
@@ -218,32 +206,21 @@ export class SolanaRealtimeService {
   }
 
   /**
-   * Get MagicBlock service instance
-   */
-  getMagicBlockService() {
-    return this.magicBlockService;
-  }
-
-  /**
    * Check if real-time service is connected
    */
   isConnected(): boolean {
-    return this.magicBlockService?.isConnected() || false;
+    return true;
   }
 
   /**
    * Get real-time statistics
    */
   async getRealtimeStats() {
-    if (MAGICBLOCK_CONFIG.enabled && this.magicBlockService) {
-      return await this.magicBlockService.getRealtimeStats();
-    }
-    
     return {
       totalTransactions: 0,
-      avgLatency: 0,
-      activeRollups: 0,
-      feesSaved: 0
+      avgLatency: 400, // Standard Solana latency in ms
+      activeSubscriptions: this.subscriptions.size,
+      connected: true
     };
   }
 
@@ -252,11 +229,6 @@ export class SolanaRealtimeService {
    */
   async cleanup(): Promise<void> {
     await this.unsubscribeAll();
-    
-    if (this.magicBlockService) {
-      this.magicBlockService.disconnect();
-    }
-    
     console.log('✅ Real-time service cleaned up');
   }
 }

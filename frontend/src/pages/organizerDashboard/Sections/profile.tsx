@@ -647,7 +647,7 @@ export function MergedDashboard() {
           <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
             ⚡ Real-Time Analytics
             <Badge className="bg-cyan-500/20 text-cyan-400 border-cyan-500/30">
-              MAGICBLOCK TRACK
+              LIVE
             </Badge>
           </h2>
           <RealTimeEventDashboard eventId="demo-event-123" />

@@ -54,7 +54,7 @@ export const FastProfile: React.FC = () => {
         <p className="text-gray-400 text-lg">Manage your events and track performance</p>
       </div>
 
-      {/* Real-time Stats powered by MagicBlock */}
+      {/* Real-time Stats */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <Card className="bg-gradient-to-br from-blue-900/20 to-blue-800/20 border-blue-700/30">
           <CardContent className="p-6">
@@ -88,7 +88,7 @@ export const FastProfile: React.FC = () => {
               <div>
                 <p className="text-purple-400 text-sm font-medium">Tickets Sold</p>
                 <p className="text-3xl font-bold text-white">0</p>
-                <p className="text-xs text-purple-300">Ultra-low latency updates</p>
+                <p className="text-xs text-purple-300">Live updates</p>
               </div>
               <Users className="w-8 h-8 text-purple-400" />
             </div>
@@ -101,7 +101,7 @@ export const FastProfile: React.FC = () => {
               <div>
                 <p className="text-orange-400 text-sm font-medium">Active Events</p>
                 <p className="text-3xl font-bold text-white">0</p>
-                <p className="text-xs text-orange-300">MagicBlock powered</p>
+                <p className="text-xs text-orange-300">Solana powered</p>
               </div>
               <TrendingUp className="w-8 h-8 text-orange-400" />
             </div>
@@ -144,13 +144,13 @@ export const FastProfile: React.FC = () => {
         </CardContent>
       </Card>
 
-      {/* MagicBlock Integration */}
+      {/* Solana Integration */}
       <Card className="bg-gradient-to-r from-purple-900/20 to-blue-900/20 border-purple-700/30">
         <CardContent className="p-6">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
               <Zap className="w-6 h-6 text-purple-400" />
-              <h2 className="text-xl font-bold text-white">MagicBlock Real-Time Engine</h2>
+              <h2 className="text-xl font-bold text-white">Solana Real-Time Engine</h2>
               <Badge className="bg-purple-500/20 text-purple-400 border-purple-500/30">
                 INTEGRATED
               </Badge>
@@ -162,25 +162,23 @@ export const FastProfile: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="text-center p-4 bg-purple-900/20 rounded-lg">
-              <p className="text-2xl font-bold text-purple-400">&lt;1ms</p>
-              <p className="text-xs text-gray-400">Ultra-low Latency</p>
+              <p className="text-2xl font-bold text-purple-400">~400ms</p>
+              <p className="text-xs text-gray-400">Transaction Speed</p>
             </div>
             <div className="text-center p-4 bg-blue-900/20 rounded-lg">
-              <p className="text-2xl font-bold text-blue-400">∞</p>
-              <p className="text-xs text-gray-400">Elastic Scalability</p>
+              <p className="text-2xl font-bold text-blue-400">~$0.00025</p>
+              <p className="text-xs text-gray-400">Transaction Cost</p>
             </div>
             <div className="text-center p-4 bg-green-900/20 rounded-lg">
               <p className="text-2xl font-bold text-green-400">100%</p>
-              <p className="text-xs text-gray-400">Solana Native</p>
+              <p className="text-xs text-gray-400">Decentralized</p>
             </div>
           </div>
           <p className="text-sm text-gray-400 mt-4">
-            Powered by MagicBlock's ephemeral rollup technology for zero-latency, high-throughput transactions
+            Powered by Solana blockchain for fast, low-cost, and secure transactions
           </p>
         </CardContent>
       </Card>
-
-
     </div>
   );
 };

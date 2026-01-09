@@ -1,36 +1,19 @@
-// Soluma Program Configuration
+// Payuur Program Configuration
 import { PublicKey } from '@solana/web3.js';
-import magicblockConfig from '../../../magicblock.json';
 
-// Program ID for deployed Soluma contract
-export const PROGRAM_ID = new PublicKey(magicblockConfig.programId);
+// Program ID for deployed Payuur contract
+export const PROGRAM_ID = new PublicKey("CfbfPPJfZVwiiSPSaf67s6eJKnLX3TARiC3MpJGsjWxr");
 
 // IDL Account for program metadata
 export const IDL_ACCOUNT = new PublicKey("HNKxFS4ZdQgW7Rud7hvuUK7HyRzhU76V6nKQnu1w1QME");
 
-// Solana Network Configuration from MagicBlock config
+// Solana Network Configuration
 export const SOLANA_CONFIG = {
-  cluster: magicblockConfig.network,
-  programId: magicblockConfig.programId,
-  wsEndpoint: magicblockConfig.websocket,
-  rpcUrl: magicblockConfig.solana.rpcUrl,
-  commitment: magicblockConfig.solana.commitment as 'processed' | 'confirmed' | 'finalized'
-};
-
-// MagicBlock Configuration
-export const MAGICBLOCK_CONFIG = {
-  enabled: magicblockConfig.magicblock.enabled,
-  endpoint: magicblockConfig.magicblock.apiEndpoint,
-  websocketUrl: magicblockConfig.magicblock.realtimeEndpoint,
-  features: magicblockConfig.magicblock.features,
-  
-  // Ephemeral Rollup settings
-  rollupConfig: {
-    maxTransactionsPerBatch: 100,
-    batchTimeoutMs: 1000,
-    enableZeroFees: magicblockConfig.magicblock.features.zeroFees,
-    enableInstantFinality: magicblockConfig.magicblock.features.instantFinality
-  }
+  cluster: 'devnet',
+  programId: "CfbfPPJfZVwiiSPSaf67s6eJKnLX3TARiC3MpJGsjWxr",
+  wsEndpoint: 'wss://api.devnet.solana.com',
+  rpcUrl: 'https://api.devnet.solana.com',
+  commitment: 'confirmed' as 'processed' | 'confirmed' | 'finalized'
 };
 
 // Event Management Constants

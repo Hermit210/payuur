@@ -1,14 +1,13 @@
-// Soluma Event Platform with MagicBlock Ephemeral Rollups Integration
+// Soluma Event Platform - Solana Program
 use anchor_lang::prelude::*;
 
 declare_id!("CfbfPPJfZVwiiSPSaf67s6eJKnLX3TARiC3MpJGsjWxr");
 
-#[ephemeral]
 #[program]
 pub mod soluma {
     use super::*;
 
-    /// Initialize a new event with MagicBlock ER support
+    /// Initialize a new event
     pub fn initialize_event(
         ctx: Context<InitializeEvent>,
         title: String,
@@ -34,7 +33,7 @@ pub mod soluma {
         Ok(())
     }
 
-    /// Purchase ticket with real-time MagicBlock processing
+    /// Purchase ticket
     pub fn purchase_ticket(ctx: Context<PurchaseTicket>) -> Result<()> {
         let event = &mut ctx.accounts.event;
         let ticket = &mut ctx.accounts.ticket;
@@ -43,7 +42,7 @@ pub mod soluma {
         require!(event.tickets_sold < event.capacity, EventError::EventSoldOut);
         require!(event.is_active, EventError::EventInactive);
         
-        // Transfer payment (handled by MagicBlock ER for zero fees)
+        // Transfer payment
         let transfer_instruction = anchor_lang::solana_program::system_instruction::transfer(
             &ctx.accounts.buyer.key(),
             &event.organizer,
@@ -66,14 +65,14 @@ pub mod soluma {
         ticket.ticket_id = event.tickets_sold;
         ticket.bump = ctx.bumps.ticket;
         
-        // Update event stats (real-time via MagicBlock)
+        // Update event stats
         event.tickets_sold += 1;
         
         msg!("Ticket purchased for event: {} by: {}", event.title, ctx.accounts.buyer.key());
         Ok(())
     }
 
-    /// Check-in ticket with real-time verification
+    /// Check-in ticket
     pub fn check_in_ticket(ctx: Context<CheckInTicket>) -> Result<()> {
         let ticket = &mut ctx.accounts.ticket;
         
@@ -86,7 +85,7 @@ pub mod soluma {
         Ok(())
     }
 
-    /// Update event capacity in real-time
+    /// Update event capacity
     pub fn update_event_capacity(
         ctx: Context<UpdateEventCapacity>,
         new_capacity: u32,
@@ -104,7 +103,7 @@ pub mod soluma {
         Ok(())
     }
 
-    /// Get real-time event stats
+    /// Get event stats
     pub fn get_event_stats(ctx: Context<GetEventStats>) -> Result<EventStats> {
         let event = &ctx.accounts.event;
         
@@ -114,47 +113,6 @@ pub mod soluma {
             revenue: event.tickets_sold as u64 * event.price_lamports,
             is_active: event.is_active,
         })
-    }
-
-    /// Delegate event account to MagicBlock Ephemeral Rollup
-    pub fn delegate_event(ctx: Context<DelegateEvent>) -> Result<()> {
-        msg!("Delegating event to MagicBlock ER for ultra-fast processing");
-        // MagicBlock delegation logic will be injected here
-        Ok(())
-    }
-
-    /// Purchase ticket and commit to base layer (called on ER)
-    pub fn purchase_ticket_and_commit(ctx: Context<PurchaseTicketAndCommit>) -> Result<()> {
-        let event = &mut ctx.accounts.event;
-        let ticket = &mut ctx.accounts.ticket;
-        
-        // Check event capacity
-        require!(event.tickets_sold < event.capacity, EventError::EventSoldOut);
-        require!(event.is_active, EventError::EventInactive);
-        
-        // Create ticket (ultra-fast on ER)
-        ticket.event = event.key();
-        ticket.buyer = ctx.accounts.buyer.key();
-        ticket.purchase_time = Clock::get()?.unix_timestamp;
-        ticket.is_used = false;
-        ticket.ticket_id = event.tickets_sold;
-        ticket.bump = ctx.bumps.ticket;
-        
-        // Update event stats
-        event.tickets_sold += 1;
-        
-        msg!("Ticket purchased and committed via MagicBlock ER: {} for event: {}", 
-             ticket.ticket_id, event.title);
-        
-        // MagicBlock will automatically commit this to base layer
-        Ok(())
-    }
-
-    /// Undelegate event account from MagicBlock ER
-    pub fn undelegate_event(ctx: Context<UndelegateEvent>) -> Result<()> {
-        msg!("Undelegating event from MagicBlock ER back to base layer");
-        // MagicBlock undelegation logic will be injected here
-        Ok(())
     }
 }
 
@@ -246,49 +204,6 @@ pub struct UpdateEventCapacity<'info> {
 #[derive(Accounts)]
 pub struct GetEventStats<'info> {
     pub event: Account<'info, Event>,
-}
-
-// MagicBlock Delegation Context Structures
-#[derive(Accounts)]
-pub struct DelegateEvent<'info> {
-    #[account(mut)]
-    pub event: Account<'info, Event>,
-    
-    #[account(mut)]
-    pub organizer: Signer<'info>,
-    
-    pub system_program: Program<'info, System>,
-}
-
-#[derive(Accounts)]
-pub struct PurchaseTicketAndCommit<'info> {
-    #[account(mut)]
-    pub event: Account<'info, Event>,
-    
-    #[account(
-        init,
-        payer = buyer,
-        space = 8 + 32 + 32 + 4 + 8 + 9 + 1 + 1,
-        seeds = [b"ticket", event.key().as_ref(), buyer.key().as_ref()],
-        bump
-    )]
-    pub ticket: Account<'info, Ticket>,
-    
-    #[account(mut)]
-    pub buyer: Signer<'info>,
-    
-    pub system_program: Program<'info, System>,
-}
-
-#[derive(Accounts)]
-pub struct UndelegateEvent<'info> {
-    #[account(mut)]
-    pub event: Account<'info, Event>,
-    
-    #[account(mut)]
-    pub organizer: Signer<'info>,
-    
-    pub system_program: Program<'info, System>,
 }
 
 // Return Types

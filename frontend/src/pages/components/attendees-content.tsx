@@ -6,7 +6,7 @@ export default function AttendeesContent() {
       <div className="text-center mb-8">
         <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">For Attendees</h1>
         <p className="text-lg text-gray-300">
-          Discover how Soluma enhances your event experience with secure, digital tickets and exclusive benefits.
+          Discover how Payuur enhances your event experience with secure, digital tickets and exclusive benefits.
         </p>
       </div>
 
@@ -111,7 +111,7 @@ export default function AttendeesContent() {
 
       {/* Benefits */}
       <div className="bg-gray-900/30 backdrop-blur-sm border border-gray-800/50 rounded-xl p-8">
-        <h2 className="text-2xl font-semibold text-white mb-6">Why Choose Soluma Tickets?</h2>
+        <h2 className="text-2xl font-semibold text-white mb-6">Why Choose Payuur Tickets?</h2>
 
         <div className="grid md:grid-cols-2 gap-6">
           <div className="space-y-4">

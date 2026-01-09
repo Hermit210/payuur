@@ -76,12 +76,12 @@ export function EventsShowcase() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Events Powered by{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
-              Soluma
+              Payuur
             </span>
           </h2>
           <p className="text-lg text-gray-400 max-w-3xl mx-auto">
             From intimate workshops to global conferences, creators trust
-            Soluma for seamless, secure, and decentralized event management.
+            Payuur for seamless, secure, and decentralized event management.
           </p>
         </div>
 

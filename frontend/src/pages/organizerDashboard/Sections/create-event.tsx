@@ -9,7 +9,6 @@ import { ensureFirebaseAuth } from "../../../config/firebase";
 import { createEvent } from "../../../lib/events";
 import { useWallet } from "@solana/wallet-adapter-react";
 import { uploadImage } from "../../../lib/cloudinary";
-import { MAGICBLOCK_CONFIG } from "../../../config/soluma";
 import {
   Upload,
   Calendar,
@@ -17,7 +16,6 @@ import {
   Users,
   DollarSign,
   Wallet,
-  Zap,
 } from "lucide-react";
 
 type Currency = "SOL" | "USDC";
@@ -57,8 +55,6 @@ export default function CreateEventEnhanced() {
   const [logoPreview, setLogoPreview] = useState<string | null>(null);
   const [logoFile, setLogoFile] = useState<File | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [useMagicBlock, setUseMagicBlock] = useState(true);
-  const [magicBlockStatus, setMagicBlockStatus] = useState<string>("");
 
   const startsAtRef = useRef<HTMLInputElement | null>(null);
   const endsAtRef = useRef<HTMLInputElement | null>(null);
@@ -70,12 +66,12 @@ export default function CreateEventEnhanced() {
     mutationFn: createEvent,
     onSuccess: (id) => {
       queryClient.invalidateQueries({ queryKey: ["events", "published"] });
-      handleEventCreated(); // This will update the state in the layout
+      handleEventCreated();
       navigate(`/events/${id}`);
     },
     onError: (e: any) => {
       setErr(e?.message || "Failed to create event. Please try again.");
-      setIsSubmitting(false); // Re-enable button on mutation error
+      setIsSubmitting(false);
     },
   });
 
@@ -104,23 +100,18 @@ export default function CreateEventEnhanced() {
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     setErr(null);
-    setIsSubmitting(true); // Disable button immediately
+    setIsSubmitting(true);
 
     if (!title || !startsAt || !price || !receiverWallet) {
       setErr("Please fill all required fields.");
-      setIsSubmitting(false); // Re-enable button on validation error
+      setIsSubmitting(false);
       return;
-    }
-
-    // MagicBlock Integration - Show processing status
-    if (useMagicBlock && MAGICBLOCK_CONFIG.enabled) {
-      setMagicBlockStatus("🚀 Processing via MagicBlock Ephemeral Rollups...");
     }
 
     const priceNum = Number(price);
     if (!Number.isFinite(priceNum) || priceNum <= 0) {
       setErr("Price must be a positive number.");
-      setIsSubmitting(false); // Re-enable button on validation error
+      setIsSubmitting(false);
       return;
     }
 
@@ -129,29 +120,8 @@ export default function CreateEventEnhanced() {
     const organizerWallet = connected && publicKey ? publicKey.toString() : null;
     if (!organizerWallet) {
       setErr("Please connect your wallet to create an event.");
-      setIsSubmitting(false); // Re-enable button on validation error
+      setIsSubmitting(false);
       return;
-    }
-
-    // MagicBlock Processing
-    let processingTime = 0;
-    if (useMagicBlock && MAGICBLOCK_CONFIG.enabled) {
-      const startTime = Date.now();
-      setMagicBlockStatus("⚡ Ultra-fast processing via MagicBlock ER...");
-      
-      try {
-        // Simulate MagicBlock's ultra-low latency processing
-        await new Promise(resolve => setTimeout(resolve, Math.random() * 2)); // <2ms
-        
-        processingTime = Date.now() - startTime;
-        setMagicBlockStatus(`✅ Processed in ${processingTime}ms with $0 fees via MagicBlock!`);
-        
-        // Brief delay to show the success message
-        await new Promise(resolve => setTimeout(resolve, 1000));
-      } catch (error) {
-        setMagicBlockStatus("❌ MagicBlock processing failed, falling back to regular Solana");
-        setUseMagicBlock(false);
-      }
     }
 
     let bannerUrl = "";
@@ -159,15 +129,10 @@ export default function CreateEventEnhanced() {
       try {
         setErr(null);
         createEventMutation.reset();
-
-        if (useMagicBlock) {
-          setMagicBlockStatus("📸 Uploading image with MagicBlock acceleration...");
-        }
-
         bannerUrl = await uploadImage(logoFile);
       } catch (error: any) {
         setErr(error.message || "Failed to upload image.");
-        setIsSubmitting(false); // Re-enable button on upload error
+        setIsSubmitting(false);
         return;
       }
     }
@@ -266,55 +231,6 @@ export default function CreateEventEnhanced() {
                   <div className="bg-red-900/50 border border-red-500/20 text-red-400 p-4 rounded-xl mb-6 flex items-center gap-3">
                     <div className="w-2 h-2 bg-red-500 rounded-full animate-ping"></div>
                     {err}
-                  </div>
-                )}
-
-                {/* MagicBlock Integration Status */}
-                {MAGICBLOCK_CONFIG.enabled && (
-                  <div className="bg-gradient-to-r from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-xl p-4 mb-6">
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="flex items-center gap-2">
-                        <Zap className="w-5 h-5 text-purple-400" />
-                        <span className="text-white font-medium">MagicBlock Ephemeral Rollups</span>
-                        <div className="px-2 py-1 bg-purple-500/20 text-purple-400 text-xs rounded-full">
-                          ULTRA-FAST
-                        </div>
-                      </div>
-                      <label className="flex items-center gap-2 cursor-pointer">
-                        <input
-                          type="checkbox"
-                          checked={useMagicBlock}
-                          onChange={(e) => setUseMagicBlock(e.target.checked)}
-                          className="w-4 h-4 text-purple-600 bg-gray-800 border-gray-600 rounded focus:ring-purple-500"
-                        />
-                        <span className="text-sm text-gray-300">Enable</span>
-                      </label>
-                    </div>
-                    
-                    {useMagicBlock && (
-                      <div className="text-sm text-gray-400 space-y-1">
-                        <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                          <span>⚡ Ultra-low latency (&lt;1ms processing)</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                          <span>🆓 Zero transaction fees within rollup</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                          <span>📈 Real-time state updates</span>
-                        </div>
-                      </div>
-                    )}
-
-                    {magicBlockStatus && (
-                      <div className="mt-3 p-3 bg-black/50 rounded-lg border border-gray-700">
-                        <div className="text-sm text-purple-400 font-medium">
-                          {magicBlockStatus}
-                        </div>
-                      </div>
-                    )}
                   </div>
                 )}
 
@@ -492,8 +408,6 @@ export default function CreateEventEnhanced() {
                       className={`absolute transition-all duration-200 rounded-full -inset-px ${
                         submitting
                           ? "bg-gray-700"
-                          : useMagicBlock && MAGICBLOCK_CONFIG.enabled
-                          ? "bg-gradient-to-r from-purple-500 to-blue-500"
                           : "bg-gradient-to-r from-cyan-500 to-purple-500"
                       }`}
                     ></div>
@@ -510,14 +424,11 @@ export default function CreateEventEnhanced() {
                       {submitting ? (
                         <div className="flex items-center justify-center gap-2">
                           <div className="w-5 h-5 border-2 border-gray-400 border-t-transparent rounded-full animate-spin"></div>
-                          {useMagicBlock && MAGICBLOCK_CONFIG.enabled ? "Creating via MagicBlock..." : "Creating Event..."}
+                          Creating Event...
                         </div>
                       ) : (
                         <div className="flex items-center justify-center gap-2">
-                          {useMagicBlock && MAGICBLOCK_CONFIG.enabled && (
-                            <Zap className="w-5 h-5 text-purple-400" />
-                          )}
-                          {useMagicBlock && MAGICBLOCK_CONFIG.enabled ? "Create Event (Zero Fees)" : "Create Event"}
+                          Create Event
                         </div>
                       )}
                     </button>

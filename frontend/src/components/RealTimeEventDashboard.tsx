@@ -1,4 +1,4 @@
-// Real-time event dashboard component for MagicBlock track
+// Real-time event dashboard component
 import React, { useState, useEffect } from 'react';
 import { useWallet } from '@solana/wallet-adapter-react';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';

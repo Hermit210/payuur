@@ -51,7 +51,7 @@ const ComponentName: React.FC = () => {
               {/* Description */}
               <p className="max-w-lg mt-4 text-2xl font-normal text-gray-400 sm:mt-8 text-center lg:text-left mx-auto lg:mx-0">
                 Effortlessly create and manage events on the Solana blockchain
-                with Soluma. Sell tickets, manage attendees, and receive
+                with Payuur. Sell tickets, manage attendees, and receive
                 payments directly to your wallet.
               </p>
 

@@ -82,7 +82,7 @@ export default function StatsSection() {
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              Soluma is backed by industry-leading Web3 tools. With Web3Auth, Solana blockchain, and Solana Pay, we ensure security, scalability, and seamless payments for all events.
+              Payuur is backed by industry-leading Web3 tools. With Web3Auth, Solana blockchain, and Solana Pay, we ensure security, scalability, and seamless payments for all events.
             </p>
           </div>
 

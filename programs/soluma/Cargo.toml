@@ -1,7 +1,7 @@
 [package]
 name = "soluma"
 version = "0.1.0"
-description = "Soluma Event Platform with MagicBlock Ephemeral Rollups"
+description = "Soluma Event Platform on Solana"
 edition = "2021"
 
 [lib]
@@ -17,4 +17,4 @@ default = []
 idl-build = ["anchor-lang/idl-build"]
 
 [dependencies]
-anchor-lang = { version = "0.32.1", features = ["ephemeral-rollups"] }
+anchor-lang = "0.32.1"

@@ -29,7 +29,7 @@ export const QuickDashboard: React.FC = () => {
         <div className="flex items-center justify-center gap-2">
           <Zap className="w-8 h-8 text-yellow-400" />
           <h1 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-            Welcome to Soluma!
+            Welcome to Payuur!
           </h1>
           <Shield className="w-8 h-8 text-green-400" />
         </div>

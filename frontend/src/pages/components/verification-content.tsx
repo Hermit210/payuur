@@ -6,7 +6,7 @@ export default function VerificationContent() {
       <div className="text-center mb-8">
         <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">Ticket Verification</h1>
         <p className="text-lg text-gray-300">
-          Learn how Soluma's blockchain-based verification system ensures secure and instant ticket validation.
+          Learn how Payuur's blockchain-based verification system ensures secure and instant ticket validation.
         </p>
       </div>
 
@@ -203,7 +203,7 @@ export default function VerificationContent() {
           <div>
             <h3 className="text-lg font-medium text-white mb-3">Install Verification SDK</h3>
             <div className="bg-black/50 border border-gray-700 rounded-lg p-4">
-              <code className="text-green-400 text-sm">npm install @soluma/verification-sdk</code>
+              <code className="text-green-400 text-sm">npm install @payuur/verification-sdk</code>
             </div>
           </div>
 
@@ -211,7 +211,7 @@ export default function VerificationContent() {
             <h3 className="text-lg font-medium text-white mb-3">Basic Verification</h3>
             <div className="bg-black/50 border border-gray-700 rounded-lg p-4">
               <code className="text-green-400 text-sm">
-                import &#123; verifyTicket &#125; from '@soluma/verification-sdk'
+                import &#123; verifyTicket &#125; from '@payuur/verification-sdk'
                 <br />
                 <br />
                 const result = await verifyTicket(&#123;

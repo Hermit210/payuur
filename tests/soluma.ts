@@ -3,16 +3,6 @@ import { Program } from "@coral-xyz/anchor";
 import { Soluma } from "../target/types/soluma";
 import { expect } from "chai";
 import { PublicKey, Keypair, SystemProgram } from "@solana/web3.js";
-import { it } from "node:test";
-import { it } from "node:test";
-import { it } from "node:test";
-import { it } from "node:test";
-import { it } from "node:test";
-import { it } from "node:test";
-import { it } from "node:test";
-import { it } from "node:test";
-import { before } from "node:test";
-import { describe } from "node:test";
 
 describe("Soluma", () => {
   // Configure the client to use the local cluster
@@ -181,68 +171,5 @@ describe("Soluma", () => {
     expect(stats.capacity).to.equal(150);
     expect(stats.revenue.toNumber()).to.equal(priceInLamports);
     expect(stats.isActive).to.be.true;
-  });
-
-  // MagicBlock Ephemeral Rollup Tests
-  it("Delegates event to MagicBlock ER", async () => {
-    const tx = await program.methods
-      .delegateEvent()
-      .accounts({
-        event: eventPda,
-        organizer: organizer.publicKey,
-        systemProgram: SystemProgram.programId,
-      })
-      .signers([organizer])
-      .rpc();
-
-    console.log("Delegate event transaction signature:", tx);
-  });
-
-  it("Purchases ticket with commit via MagicBlock ER", async () => {
-    const buyer2 = Keypair.generate();
-    
-    // Airdrop SOL to buyer2
-    await provider.connection.requestAirdrop(
-      buyer2.publicKey,
-      2 * anchor.web3.LAMPORTS_PER_SOL
-    );
-    await new Promise(resolve => setTimeout(resolve, 1000));
-
-    const [ticket2Pda] = PublicKey.findProgramAddressSync(
-      [Buffer.from("ticket"), eventPda.toBuffer(), buyer2.publicKey.toBuffer()],
-      program.programId
-    );
-
-    const tx = await program.methods
-      .purchaseTicketAndCommit()
-      .accounts({
-        event: eventPda,
-        ticket: ticket2Pda,
-        buyer: buyer2.publicKey,
-        systemProgram: SystemProgram.programId,
-      })
-      .signers([buyer2])
-      .rpc();
-
-    console.log("Purchase ticket and commit transaction signature:", tx);
-
-    // Verify ticket was created
-    const ticketAccount = await program.account.ticket.fetch(ticket2Pda);
-    expect(ticketAccount.buyer.toString()).to.equal(buyer2.publicKey.toString());
-    expect(ticketAccount.isUsed).to.be.false;
-  });
-
-  it("Undelegates event from MagicBlock ER", async () => {
-    const tx = await program.methods
-      .undelegateEvent()
-      .accounts({
-        event: eventPda,
-        organizer: organizer.publicKey,
-        systemProgram: SystemProgram.programId,
-      })
-      .signers([organizer])
-      .rpc();
-
-    console.log("Undelegate event transaction signature:", tx);
   });
 });

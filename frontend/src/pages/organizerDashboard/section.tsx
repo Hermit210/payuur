@@ -89,7 +89,7 @@ export default function OrganizerDashboard() {
       <div className="flex justify-center items-center h-screen bg-black text-white">
         <div className="text-center">
           <div className="w-8 h-8 border-4 border-gray-800 border-t-blue-500 rounded-full animate-spin mx-auto mb-4"></div>
-          <p>Connecting to Soluma...</p>
+          <p>Connecting to Payuur...</p>
         </div>
       </div>
     );
@@ -128,13 +128,13 @@ export default function OrganizerDashboard() {
         <div className="flex-1 lg:ml-64">
           <div className="lg:hidden flex items-center justify-between p-4 border-b border-gray-800 panel-3d">
              <a href="/" className="inline-flex items-center cursor-pointer group">
-               <img src={logo} alt="Soluma Logo" className="h-8 w-8 mr-2" />
+               <img src={logo} alt="Payuur Logo" className="h-8 w-8 mr-2" />
                <span className="text-xl font-bold tracking-tight text-3d">
                  <span className="text-white group-hover:text-cyan-300 transition-colors duration-200">
-                   Solu
+                   Pay
                  </span>
                  <span className="text-cyan-400 group-hover:text-blue-400 transition-colors duration-200">
-                   ma
+                   uur
                  </span>
                </span>
              </a>

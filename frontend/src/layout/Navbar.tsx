@@ -267,10 +267,10 @@ export default function NavBar() {
               {/* Left: Logo */}
               <div className="flex items-center gap-4">
                 <Link to="/" className="inline-flex items-center cursor-pointer group">
-                  <img src={logo} alt="Soluma Logo" className="h-12 w-12" />
+                  <img src={logo} alt="Payuur Logo" className="h-12 w-12" />
                   <span className="text-2xl font-bold tracking-tight">
-                    <span className="text-white group-hover:text-blue-300 transition-colors duration-200">SoLu</span>
-                    <span className="text-blue-400 group-hover:text-purple-400 transition-colors duration-200">ma</span>
+                    <span className="text-white group-hover:text-blue-300 transition-colors duration-200">Pay</span>
+                    <span className="text-blue-400 group-hover:text-purple-400 transition-colors duration-200">uur</span>
                   </span>
                 </Link>
               </div>

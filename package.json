@@ -1,7 +1,7 @@
 {
-  "name": "soluma-magicblock",
+  "name": "soluma",
   "version": "0.1.0",
-  "description": "Soluma Event Platform with MagicBlock Ephemeral Rollups",
+  "description": "Soluma Event Platform on Solana",
   "main": "index.js",
   "scripts": {
     "lint:fix": "prettier */*.js \"*/**/*{.js,.ts}\" -w",
@@ -10,15 +10,11 @@
     "build": "anchor build",
     "deploy": "anchor deploy",
     "deploy:devnet": "anchor deploy --provider.cluster devnet",
-    "magicblock:start": "magicblock-engine start",
-    "magicblock:test": "anchor test --provider.cluster http://localhost:8899",
-    "magicblock:demo": "node scripts/test-magicblock.js",
     "demo": "node scripts/demo.js",
     "setup": "npm install && cd frontend && npm install && cd ../backend && npm install",
     "dev:frontend": "cd frontend && npm run dev",
     "dev:backend": "cd backend && npm start",
-    "build:frontend": "cd frontend && npm run build",
-    "deploy:full": "bash scripts/deploy-magicblock.sh devnet"
+    "build:frontend": "cd frontend && npm run build"
   },
   "dependencies": {
     "@coral-xyz/anchor": "^0.30.1",

@@ -373,7 +373,7 @@ function UserDashboardView() {
   return (
     <div className="text-center">
       <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">
-        Welcome to Soluma
+        Welcome to Payuur
       </h1>
       <p className="text-gray-400 text-lg mb-8">
         Explore events or create your own to bring your community together

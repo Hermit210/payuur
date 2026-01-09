@@ -6,7 +6,7 @@ export default function GettingStartedContent() {
       <div className="text-center mb-8">
         <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">Getting Started</h1>
         <p className="text-lg text-gray-300">
-          Follow this comprehensive guide to set up your Soluma environment and create your first event.
+          Follow this comprehensive guide to set up your Payuur environment and create your first event.
         </p>
       </div>
 
@@ -50,9 +50,9 @@ export default function GettingStartedContent() {
             <h3 className="text-lg font-medium text-white mb-3">1. Clone the Repository</h3>
             <div className="bg-black/50 border border-gray-700 rounded-lg p-4">
               <code className="text-green-400 text-sm">
-                git clone https://github.com/soluma/soluma-platform.git
+                git clone https://github.com/payuur/payuur-platform.git
                 <br />
-                cd soluma-platform
+                cd payuur-platform
               </code>
             </div>
           </div>

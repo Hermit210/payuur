@@ -39,8 +39,8 @@ export function Settings() {
                 {/* Avatar Section */}
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 p-4 bg-gray-800/30 rounded-xl border border-gray-700/30">
                   <Avatar className="w-20 h-20 sm:w-24 sm:h-24 border-2 border-gray-700/50">
-                    <AvatarImage src="https://api.dicebear.com/7.x/initials/svg?seed=Soluma" />
-                    <AvatarFallback className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 text-cyan-300 text-lg font-semibold">SO</AvatarFallback>
+                    <AvatarImage src="https://api.dicebear.com/7.x/initials/svg?seed=Payuur" />
+                    <AvatarFallback className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 text-cyan-300 text-lg font-semibold">PY</AvatarFallback>
                   </Avatar>
                   <div className="flex-1 space-y-3">
                     <div>
@@ -63,7 +63,7 @@ export function Settings() {
                     </Label>
                     <Input
                       id="full-name"
-                      defaultValue="Soluma Organizer"
+                      defaultValue="Payuur Organizer"
                       className="bg-gray-800/50 border-gray-700/50 text-white placeholder-gray-400 focus:border-cyan-500/50 focus:ring-cyan-500/20 transition-all duration-200"
                     />
                   </div>
@@ -73,7 +73,7 @@ export function Settings() {
                     </Label>
                     <Input
                       id="username"
-                      defaultValue="soluma_organizer"
+                      defaultValue="payuur_organizer"
                       className="bg-gray-800/50 border-gray-700/50 text-white placeholder-gray-400 focus:border-cyan-500/50 focus:ring-cyan-500/20 transition-all duration-200"
                     />
                   </div>
@@ -86,7 +86,7 @@ export function Settings() {
                   <Input 
                     id="email" 
                     type="email" 
-                    defaultValue="organizer@soluma.io" 
+                    defaultValue="organizer@payuur.io" 
                     className="bg-gray-800/50 border-gray-700/50 text-white placeholder-gray-400 focus:border-cyan-500/50 focus:ring-cyan-500/20 transition-all duration-200" 
                   />
                 </div>

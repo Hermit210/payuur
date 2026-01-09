@@ -43,7 +43,7 @@ export const FastDashboard: React.FC = () => {
       <div className="text-center space-y-4">
         <div className="flex items-center justify-center gap-2">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent text-3d-bold">
-            Soluma Dashboard
+            Payuur Dashboard
           </h1>
           <Badge className="bg-green-500/20 text-green-400 border-green-500/30 animate-pulse-glow">
             <Zap className="w-4 h-4 mr-1" />
@@ -53,7 +53,7 @@ export const FastDashboard: React.FC = () => {
         <p className="text-gray-400 text-lg">Welcome to the future of event ticketing on Solana</p>
       </div>
 
-      {/* Real-time Stats powered by MagicBlock */}
+      {/* Real-time Stats */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <Card className="card-3d bg-gradient-to-br from-blue-900/20 to-blue-800/20 border-blue-700/30 glow-white">
           <CardContent className="p-6">
@@ -87,7 +87,7 @@ export const FastDashboard: React.FC = () => {
               <div>
                 <p className="text-purple-400 text-sm font-medium text-3d">Tickets Sold</p>
                 <p className="text-3xl font-bold text-white text-3d-bold">0</p>
-                <p className="text-xs text-purple-300">Ultra-low latency updates</p>
+                <p className="text-xs text-purple-300">Live updates</p>
               </div>
               <Ticket className="w-8 h-8 text-purple-400" />
             </div>
@@ -100,7 +100,7 @@ export const FastDashboard: React.FC = () => {
               <div>
                 <p className="text-orange-400 text-sm font-medium text-3d">Active Users</p>
                 <p className="text-3xl font-bold text-white text-3d-bold">0</p>
-                <p className="text-xs text-orange-300">MagicBlock powered</p>
+                <p className="text-xs text-orange-300">Solana powered</p>
               </div>
               <Users className="w-8 h-8 text-orange-400" />
             </div>
@@ -226,38 +226,38 @@ export const FastDashboard: React.FC = () => {
         </Card>
       </div>
 
-      {/* MagicBlock Real-time Engine */}
+      {/* Solana Integration */}
       <Card className="bg-gradient-to-r from-purple-900/20 to-blue-900/20 border-purple-700/30">
         <CardContent className="p-8">
           <div className="text-center mb-6">
             <div className="flex items-center justify-center gap-2 mb-4">
               <Zap className="w-8 h-8 text-purple-400" />
-              <h2 className="text-3xl font-bold text-white">MagicBlock Integration</h2>
+              <h2 className="text-3xl font-bold text-white">Solana Integration</h2>
               <Badge className="bg-purple-500/20 text-purple-400 border-purple-500/30">
-                REAL-TIME ENGINE
+                REAL-TIME
               </Badge>
             </div>
             <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-              Ultra-low latency, on-demand runtimes, and elastic scalability for fully onchain applications. 
-              Experience Web2-level performance without sacrificing Web3 benefits.
+              Fast, low-cost, and secure transactions on Solana blockchain. 
+              Experience Web2-level performance with Web3 benefits.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
             <div className="text-center p-6 bg-purple-900/20 rounded-lg border border-purple-700/30">
-              <div className="text-3xl font-bold text-purple-400 mb-2">&lt;1ms</div>
-              <div className="text-sm font-medium text-white mb-1">Ultra-Low Latency</div>
-              <div className="text-xs text-gray-400">Ephemeral rollup technology</div>
+              <div className="text-3xl font-bold text-purple-400 mb-2">~400ms</div>
+              <div className="text-sm font-medium text-white mb-1">Transaction Speed</div>
+              <div className="text-xs text-gray-400">Fast confirmations</div>
             </div>
             <div className="text-center p-6 bg-blue-900/20 rounded-lg border border-blue-700/30">
-              <div className="text-3xl font-bold text-blue-400 mb-2">∞</div>
-              <div className="text-sm font-medium text-white mb-1">Elastic Scalability</div>
-              <div className="text-xs text-gray-400">On-demand runtimes</div>
+              <div className="text-3xl font-bold text-blue-400 mb-2">~$0.00025</div>
+              <div className="text-sm font-medium text-white mb-1">Transaction Cost</div>
+              <div className="text-xs text-gray-400">Near-zero fees</div>
             </div>
             <div className="text-center p-6 bg-green-900/20 rounded-lg border border-green-700/30">
               <div className="text-3xl font-bold text-green-400 mb-2">100%</div>
-              <div className="text-sm font-medium text-white mb-1">Solana Native</div>
-              <div className="text-xs text-gray-400">Seamlessly integrated</div>
+              <div className="text-sm font-medium text-white mb-1">Decentralized</div>
+              <div className="text-xs text-gray-400">Fully on-chain</div>
             </div>
           </div>
           
@@ -269,34 +269,9 @@ export const FastDashboard: React.FC = () => {
                 </Button>
               </Link>
               <Button variant="outline" className="border-purple-600 text-purple-300 hover:bg-purple-900/20 px-8 py-3">
-                Learn About MagicBlock
+                Learn More
               </Button>
             </div>
-          </div>
-        </CardContent>
-      </Card>
-
-      {/* Hackathon Features */}
-      <Card className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 border-gray-700">
-        <CardContent className="p-8 text-center">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <h2 className="text-2xl font-bold text-white">🏆 Cypherpunk Hackathon</h2>
-            <Badge className="bg-yellow-500/20 text-yellow-400 border-yellow-500/30">
-              12.5K USDC PRIZES
-            </Badge>
-          </div>
-          <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
-            Built for the MagicBlock Real-Time Side Track with cutting-edge real-time analytics and cypherpunk security features
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/dashboard/profile">
-              <Button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white px-8 py-3">
-                View Hackathon Features
-              </Button>
-            </Link>
-            <Button variant="outline" className="border-gray-600 text-gray-300 hover:bg-gray-800 px-8 py-3">
-              Learn More
-            </Button>
           </div>
         </CardContent>
       </Card>

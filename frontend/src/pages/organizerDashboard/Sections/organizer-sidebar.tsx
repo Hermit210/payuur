@@ -29,10 +29,10 @@ const allSidebarItems = [
 
 const BrandLogo = ({ className = "" }: { className?: string }) => (
   <a href="/" className={`inline-flex items-center cursor-pointer group ${className}`}>
-    <img src={logo} alt="Soluma Logo" className="h-9 w-9 mr-2" />
+    <img src={logo} alt="Payuur Logo" className="h-9 w-9 mr-2" />
     <span className="text-2xl font-bold tracking-tight">
-      <span className="text-white group-hover:text-cyan-300">Solu</span>
-      <span className="text-cyan-400 group-hover:text-blue-400">ma</span>
+      <span className="text-white group-hover:text-cyan-300">Pay</span>
+      <span className="text-cyan-400 group-hover:text-blue-400">uur</span>
     </span>
   </a>
 );

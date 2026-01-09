@@ -5,7 +5,7 @@ export default function IntroductionContent() {
     <div className="space-y-12">
       <div className="text-center">
         <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
-          Welcome to Soluma
+          Welcome to Payuur
         </h1>
         <p className="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
           The next-generation Web3 event ticketing platform that revolutionizes how events are organized, tickets are
@@ -14,10 +14,10 @@ export default function IntroductionContent() {
       </div>
 
       <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-8">
-        <h2 className="text-3xl font-semibold text-white mb-6">What is Soluma?</h2>
+        <h2 className="text-3xl font-semibold text-white mb-6">What is Payuur?</h2>
         <div className="space-y-4 text-gray-300 leading-relaxed prose prose-invert max-w-none prose-p:text-gray-300">
           <p>
-            Soluma is a comprehensive Web3 ticketing ecosystem built on the Solana blockchain that addresses the
+            Payuur is a comprehensive Web3 ticketing ecosystem built on the Solana blockchain that addresses the
             fundamental challenges of traditional event ticketing. By leveraging blockchain technology, we eliminate
             fraud, reduce costs, and create new opportunities for event organizers and attendees.
           </p>
@@ -27,7 +27,7 @@ export default function IntroductionContent() {
             every ticket transaction is recorded on the blockchain.
           </p>
           <p>
-            Beyond basic ticketing, Soluma enables dynamic pricing, automated royalties for organizers, exclusive holder
+            Beyond basic ticketing, Payuur enables dynamic pricing, automated royalties for organizers, exclusive holder
             benefits, and seamless integration with the broader Web3 ecosystem.
           </p>
         </div>

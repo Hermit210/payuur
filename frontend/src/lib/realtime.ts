@@ -1,8 +1,7 @@
-// Real-time event updates using WebSockets with MagicBlock integration
+// Real-time event updates using WebSockets
 import { useState, useEffect } from 'react';
 import { EventDoc, OrderDoc } from '../types/ticketing';
-import { getSolanaRealtimeService } from './solana-realtime';
-import { MAGICBLOCK_CONFIG } from '../config/soluma';
+import { SOLANA_CONFIG } from '../config/soluma';
 
 export class RealtimeEventUpdates {
   private ws: WebSocket | null = null;
@@ -18,8 +17,8 @@ export class RealtimeEventUpdates {
   }
 
   connect() {
-    // Connect to MagicBlock real-time WebSocket for ultra-low latency updates
-    const wsUrl = MAGICBLOCK_CONFIG.websocketUrl || `wss://api.devnet.solana.com`;
+    // Connect to Solana WebSocket for real-time updates
+    const wsUrl = SOLANA_CONFIG.wsEndpoint || 'wss://api.devnet.solana.com';
     this.ws = new WebSocket(`${wsUrl}/events/${this.eventId}`);
     
     this.ws.onmessage = (event) => {
