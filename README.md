@@ -65,7 +65,7 @@ We are primarily competing for the following tracks where Soluma excels:
  ** Best Use of Solana Pay**
     * **Why?** Solana Pay is the core of our payment and ticketing mechanism. We use it not just for payments but as the foundation for generating verifiable, on-chain tickets via QR codes.
 
----
+
 
 ##  The Problem
 
