@@ -161,9 +161,9 @@ function makePayURL({ recipient, amount, reference, splToken }) {
     cd payuur
     ```
 2.  **Install frontend dependencies:**
-    ```bash
+    bash
     npm install
-    ```
+    
 3.  **Install backend dependencies:**
     ```bash
     cd backend
