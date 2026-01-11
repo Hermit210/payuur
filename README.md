@@ -6,8 +6,8 @@ A **real-time, decentralized event platform** built for the  of the  Combining c
 ## LIVE DEPLOYMENT 
 
 **Program ID:** `CfbfPPJfZVwiiSPSaf67s6eJKnLX3TARiC3MpJGsjWxr`  
-** Network:** Solana Devnet  
-** Status:** Live and Ready for Testing
+** Network : ** Solana Devnet  
+** Status : ** Live and Ready for Testing
 
 ## Quick Start:
 ```bash
