@@ -79,7 +79,7 @@ payuur solves this by offering a hybrid Web2 + Web3 platform. We use **MetaMask 
 -   **For Attendees:** Buy tickets with a simple QR scan using **Solana Pay**. Your ticket is a secure, on-chain asset you truly own.
 
 
-## 🛠️ Technical Architecture & Key Features
+##  Technical Architecture & Key Features
 
 payuur's hybrid architecture uses Firebase for non-critical metadata and the **Solana blockchain as the single source of truth** for payments and ticket ownership.
 
