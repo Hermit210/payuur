@@ -1,4 +1,4 @@
-#  payuur: The  Event planning  Platform for web3
+##  payuur: The  Event planning  Platform for web3
 
 A **real-time, decentralized event platform** built for the  of the  Combining cutting-edge real-time analytics with cypherpunk privacy principles on Solana.
 
