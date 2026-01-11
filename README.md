@@ -24,10 +24,10 @@ npm run dev:frontend
  Step-by-step setup instructions
 
 ##  Test the Integration:
-1. **Connect Wallet** - Use Phantom or any Solana wallet
-2. **Create Event** - Experience zero-fee creation via MagicBlock
-3. **Buy Tickets** - Instant purchases with <1ms latency
-4. **Real-time Updates** - See live changes across all users
+1. **Connect Wallet** -  Use Phantom or any Solana wallet
+2. **Create Event** -  Experience zero-fee creation via MagicBlock
+3. **Buy Tickets** -  Instant purchases with <1ms latency
+4. **Real-time Updates** -  See live changes across all users
 
 
 ##  Ephemeral Program Structure
@@ -42,18 +42,18 @@ pub mod soluma {
 
 
 ##  **Complete Delegation Lifecycle**
-1. **Delegate** → Move accounts to MagicBlock ER
-2. **Process** → Ultra-fast operations (<1ms, $0 fees)
-3. **Commit** → Automatic sync to Solana base layer
-4. **Undelegate** → Return to standard Solana operations
+1. **Delegate** →  Move accounts to MagicBlock ER
+2. **Process** →  Ultra-fast operations (<1ms, $0 fees)
+3. **Commit** →  Automatic sync to Solana base layer
+4. **Undelegate** →  Return to standard Solana operations
 
 
 
 
-1. *Real-Time Analytics**: Live ticket sales, attendee tracking, revenue monitoring with zero-latency updates
-2. *Cypherpunk Security**: Privacy-first design, censorship-resistant, decentralized architecture
-3. *Solana Native**: Fast transactions, low fees, native wallet integration with elastic scalability
-4. *Full-Stack Excellence**: React frontend, Node.js backend, Solana blockchain, MagicBlock real-time engine
+1. *Real-Time Analytics**:  Live ticket sales, attendee tracking, revenue monitoring with zero-latency updates
+2. *Cypherpunk Security**:  Privacy-first design, censorship-resistant, decentralized architecture
+3. *Solana Native**:  Fast transactions, low fees, native wallet integration with elastic scalability
+4. *Full-Stack Excellence**:  React frontend, Node.js backend, Solana blockchain, MagicBlock real-time engine
 
 
 
