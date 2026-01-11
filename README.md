@@ -67,11 +67,11 @@ We are primarily competing for the following tracks where Soluma excels:
 
 
 
-##  The Problem
+##   The Problem
 
 Event ticketing is centralized, expensive for organizers, and insecure for attendees. Traditional platforms control user data, charge high fees, and suffer from fraud. Existing Web3 solutions are often too complex for everyday users, requiring browser extensions and seed phrase management.
 
-##  Our Solution: payuur
+##   Our Solution: payuur
 
 payuur solves this by offering a hybrid Web2 + Web3 platform. We use **MetaMask Embedded Wallets (via the Web3Auth SDK)** to provide a frictionless, "seedless" onboarding experience. Users sign up with an email or social account and get a non-custodial Solana wallet without even knowing it.
 
@@ -119,7 +119,7 @@ export const web3AuthContextConfig = {
 };
 
 ```
-## 2. Dynamic Solana Pay URL Generation
+##  2. Dynamic Solana Pay URL Generation
 We create transaction requests on the fly, embedding event and payment details directly into the QR code. This is central to our "Best Use of Solana Pay" claim.
 
 ```typescript
@@ -145,7 +145,7 @@ function makePayURL({ recipient, amount, reference, splToken }) {
 ```
 ---
 
-##  Getting Started
+##   Getting Started
 
 ## Prerequisites
 -   Node.js & npm
@@ -169,7 +169,7 @@ function makePayURL({ recipient, amount, reference, splToken }) {
     cd backend
     npm install
     ```
-4.  **Set up environment variables:**
+4.   **Set up environment variables:**
     -   Create a `.env` file in the frontend root and populate it with your keys (Firebase, Web3Auth, etc.).
     - Create a `.env` file in the backend root and populate it.
   frontend env
